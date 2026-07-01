@@ -11,14 +11,22 @@ export default function MusicButton({ autoPlay = false }: MusicButtonProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const initAudio = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio(
-        'https://archive.org/download/100ClassicalMusicMasterpieces/1698%20Pachelbel%20%2C%20Canon%20in%20D.mp3'
-      );
-      audioRef.current.loop = true;
-      audioRef.current.volume = 0.4;
+    if (typeof window !== 'undefined') {
+      const win = window as any;
+      if (!win.__audio_instance__) {
+        win.__audio_instance__ = new Audio('/track.mp3');
+        win.__audio_instance__.loop = true;
+        win.__audio_instance__.volume = 0.4;
+      }
+      audioRef.current = win.__audio_instance__;
     }
   };
+
+  const userMutedRef = useRef(muted);
+
+  useEffect(() => {
+    userMutedRef.current = muted;
+  }, [muted]);
 
   useEffect(() => {
     initAudio();
@@ -31,8 +39,30 @@ export default function MusicButton({ autoPlay = false }: MusicButtonProps) {
       });
     }
 
+    const handleVisibilityChange = () => {
+      if (!audio) return;
+      if (document.hidden) {
+        audio.muted = true;
+      } else {
+        audio.muted = userMutedRef.current;
+      }
+    };
+
+    const handleUnload = () => {
+      if (audio) {
+        audio.pause();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('beforeunload', handleUnload);
+
     return () => {
-      audio.pause();
+      if (audio) {
+        audio.pause();
+      }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('beforeunload', handleUnload);
     };
   }, [autoPlay]);
 
@@ -43,7 +73,7 @@ export default function MusicButton({ autoPlay = false }: MusicButtonProps) {
 
     // If audio is paused (e.g., autoplay blocked), play it
     if (audio.paused) {
-      audio.play().catch(() => {});
+      audio.play().catch(() => { });
     }
 
     const nextMutedState = !audio.muted;

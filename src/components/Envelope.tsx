@@ -25,7 +25,7 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
 
           {/* Top decorative curves */}
           <svg
-            style={{ position: 'absolute', top: 0, left: 0, right: 0, width: '100%', opacity: 0.25 }}
+            style={{ position: 'absolute', top: 0, left: 0, right: 0, width: '100%', height: '180px', opacity: 0.25 }}
             viewBox="0 0 700 200"
             fill="none"
           >
@@ -37,7 +37,7 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
 
           {/* Bottom decorative curves */}
           <svg
-            style={{ position: 'absolute', bottom: 0, left: 0, right: 0, width: '100%', opacity: 0.25, transform: 'scaleY(-1)' }}
+            style={{ position: 'absolute', bottom: 0, left: 0, right: 0, width: '100%', height: '180px', opacity: 0.25, transform: 'scaleY(-1)' }}
             viewBox="0 0 700 200"
             fill="none"
           >

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <!-- Elegant Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="25%" stop-color="#FFDF73" />
+      <stop offset="50%" stop-color="#AA771C" />
+      <stop offset="75%" stop-color="#FDF6C7" />
+      <stop offset="100%" stop-color="#8B6508" />
+    </linearGradient>
+    <!-- Soft Red/Crimson Glow -->
+    <radialGradient id="heartGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF4B6E" />
+      <stop offset="100%" stop-color="#D11A3E" />
+    </radialGradient>
+  </defs>
+
+  <!-- Left Ring -->
+  <circle cx="11.5" cy="17" r="7.5" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+
+  <!-- Right Ring -->
+  <circle cx="20.5" cy="17" r="7.5" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+
+  <!-- Overlap correction to make them look interlinked -->
+  <path d="M 11.5 9.5 A 7.5 7.5 0 0 1 19 17" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+
+  <!-- Beautiful floating heart above the rings -->
+  <path d="M16 11.2C16 11.2 14.5 9.5 13 9.5C11.3 9.5 10 10.8 10 12.5C10 14.8 12.5 17 16 19C19.5 17 22 14.8 22 12.5C22 10.8 20.7 9.5 19 9.5C17.5 9.5 16 11.2 16 11.2Z" fill="url(#heartGrad)" />
+
+  <!-- Star/Sparkle -->
+  <path d="M25 4 L25.8 5.8 L27.6 6.6 L25.8 7.4 L25 9.2 L24.2 7.4 L22.4 6.6 L24.2 5.8 Z" fill="#FFDF73" />
+</svg>

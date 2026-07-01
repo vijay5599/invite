@@ -20,28 +20,7 @@ export default function Venue() {
 
         {/* Palace SVG illustration */}
         <div className="venue-illustration">
-          <svg viewBox="0 0 300 120" width="260" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Main dome */}
-            <ellipse cx="150" cy="45" rx="22" ry="28" stroke="#c9a84c" strokeWidth="1" fill="none" />
-            <line x1="150" y1="17" x2="150" y2="10" stroke="#c9a84c" strokeWidth="1" />
-            <circle cx="150" cy="8" r="3" fill="#c9a84c" opacity="0.6" />
-            {/* Side domes */}
-            <ellipse cx="100" cy="60" rx="14" ry="18" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.7" />
-            <ellipse cx="200" cy="60" rx="14" ry="18" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.7" />
-            {/* Small domes */}
-            <ellipse cx="65" cy="72" rx="9" ry="12" stroke="#c9a84c" strokeWidth="0.6" fill="none" opacity="0.5" />
-            <ellipse cx="235" cy="72" rx="9" ry="12" stroke="#c9a84c" strokeWidth="0.6" fill="none" opacity="0.5" />
-            {/* Base walls */}
-            <rect x="30" y="73" width="240" height="30" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.5" />
-            {/* Arches */}
-            {[50, 80, 110, 140, 160, 190, 220].map((x, i) => (
-              <path key={i} d={`M${x} 103 Q${x+10} 88 ${x+20} 103`} stroke="#c9a84c" strokeWidth="0.6" fill="none" opacity="0.5" />
-            ))}
-            {/* Center arch */}
-            <path d="M128 103 Q150 78 172 103" stroke="#c9a84c" strokeWidth="1" fill="none" opacity="0.8" />
-            {/* Base */}
-            <line x1="20" y1="103" x2="280" y2="103" stroke="#c9a84c" strokeWidth="0.8" opacity="0.4" />
-          </svg>
+          <svg viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="250" width="600" height="10" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none"></rect><path d="M350 250 V160 Q350 80 400 60 Q450 80 450 160 V250" stroke="currentColor" strokeWidth="1.5" fill="none"></path><circle cx="400" cy="55" r="4" stroke="currentColor" strokeWidth="1.5" fill="none"></circle><rect x="150" y="180" width="200" height="70" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none"></rect><path d="M200 180 V140 Q200 110 250 100 Q300 110 300 140 V180" stroke="currentColor" strokeWidth="1.5" fill="none"></path><circle cx="250" cy="96" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"></circle><rect x="450" y="180" width="200" height="70" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none"></rect><path d="M500 180 V140 Q500 110 550 100 Q600 110 600 140 V180" stroke="currentColor" strokeWidth="1.5" fill="none"></path><circle cx="550" cy="96" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"></circle><rect x="130" y="150" width="20" height="100" stroke="currentColor" strokeWidth="1.5" fill="none"></rect><path d="M125 150 L140 120 L155 150" stroke="currentColor" strokeWidth="1.5" fill="none"></path><rect x="650" y="150" width="20" height="100" stroke="currentColor" strokeWidth="1.5" fill="none"></rect><path d="M645 150 L660 120 L675 150" stroke="currentColor" strokeWidth="1.5" fill="none"></path><rect x="375" y="180" width="20" height="30" rx="10" stroke="currentColor" strokeWidth="1" fill="none"></rect><rect x="405" y="180" width="20" height="30" rx="10" stroke="currentColor" strokeWidth="1" fill="none"></rect><path d="M180 250 V220 Q180 200 210 200 Q240 200 240 220 V250" stroke="currentColor" strokeWidth="1" fill="none"></path><path d="M270 250 V220 Q270 200 300 200 Q330 200 330 220 V250" stroke="currentColor" strokeWidth="1" fill="none"></path><path d="M470 250 V220 Q470 200 500 200 Q530 200 530 220 V250" stroke="currentColor" strokeWidth="1" fill="none"></path><path d="M560 250 V220 Q560 200 590 200 Q620 200 620 220 V250" stroke="currentColor" strokeWidth="1" fill="none"></path><path d="M375 250 V210 Q375 185 400 180 Q425 185 425 210 V250" stroke="currentColor" strokeWidth="1.5" fill="none"></path><circle cx="150" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="200" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="250" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="300" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="350" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="400" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="450" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="500" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="550" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="600" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle><circle cx="650" cy="265" r="1.5" fill="currentColor" opacity="0.4"></circle></svg>
         </div>
 
         <a

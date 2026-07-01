@@ -21,7 +21,7 @@ export default function ScratchCard({ date, day, time }: ScratchCardProps) {
 
     const initCanvas = () => {
       canvas.width = canvas.offsetWidth || 300;
-      canvas.height = canvas.offsetHeight || 150;
+      canvas.height = canvas.offsetHeight || 180;
 
       // Fill with gradient scratch overlay
       const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
@@ -100,7 +100,7 @@ export default function ScratchCard({ date, day, time }: ScratchCardProps) {
         <canvas
           ref={canvasRef}
           className="scratch-canvas"
-          style={{ 
+          style={{
             transition: 'opacity 0.5s ease',
             pointerEvents: revealed ? 'none' : 'auto'
           }}

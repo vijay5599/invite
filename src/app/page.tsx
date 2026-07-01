@@ -14,6 +14,7 @@ import InfoSections from '@/components/InfoSections';
 import RSVPForm from '@/components/RSVPForm';
 import Footer from '@/components/Footer';
 import MusicButton from '@/components/MusicButton';
+import Confetti from '@/components/Confetti';
 import { useFadeIn } from '@/hooks/useFadeIn';
 
 // Dynamic import for scratch card to avoid SSR canvas issues
@@ -57,6 +58,9 @@ export default function HomePage() {
 
       {/* Ambient particles */}
       {showContent && <Particles />}
+
+      {/* Celebration Confetti Burst */}
+      {showContent && <Confetti />}
 
       {/* Curtain drapes on sides */}
       {showContent && <Curtains />}
